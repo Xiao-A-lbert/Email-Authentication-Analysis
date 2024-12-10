@@ -33,7 +33,7 @@ Examining the received header, I identified the sender's mail server (o22.mailse
 To manually check the spf records, I used a dig command to look for text records from the sender "mailserviceemailout1.namecheck.com" and grepped out spf. The results showed all records including records from "sendgrid.net." 
 Another dig into "sendgrid.net" showed a range of authorized ip senders including 149.72.0.0/16. 
 In summary, the email originiated from o22.mailservice.namecheap.com with an ip of 149.72.142.11 which was authorized to send emails from mailserviceemailout1.namecheap.com.
-The spd record for mailserviceemailout1 includes sendgrid.net, indicating emails can be sent through sendgrid's infrastructure. 
+The spf record for mailserviceemailout1 includes sendgrid.net, indicating emails can be sent through sendgrid's infrastructure. 
 Google's email server verified this and allowed the email to pass through.      
 
 ![3) dig txt records from email server grep spf, dig sendgrid to find ip address](https://github.com/user-attachments/assets/987c9e6f-738a-4c48-84ed-b8c9c3c2e0d3)
